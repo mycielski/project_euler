@@ -9,3 +9,5 @@ if __name__ == "__main__":
         os.system("cargo fmt")
         os.system("cargo clean")
         os.chdir("..")
+    os.system("git commit . -m " + "\"" + "formatting" + "\"")
+    os.system("git push")

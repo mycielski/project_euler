@@ -21,7 +21,7 @@ fn main() {
     01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48";
 
     let v = string_grid_to_vector_grid(grid);
-    println!("Solution: {}", largest_product_in_grid(&v));
+    println!("{}", largest_product_in_grid(&v));
 }
 
 fn string_grid_to_vector_grid(grid: &str) -> Vec<Vec<u32>> {
@@ -32,9 +32,6 @@ fn string_grid_to_vector_grid(grid: &str) -> Vec<Vec<u32>> {
             v_line.push(num.parse::<u32>().unwrap());
         }
         v.push(v_line);
-    }
-    for line in v.iter() {
-        println!("{:?}", line);
     }
     v
 }
