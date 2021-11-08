@@ -11,10 +11,10 @@ if __name__ == "__main__":
         os.system("cargo fmt")
         os.system("cargo clean")
         os.chdir("..")
-    
+
     if allow_dirty:
         os.system("git branch dirty")
         os.system("git checkout dirty")
 
-    os.system("git commit . -m " + "\"" + "formatting" + "\"")
+    os.system("git commit . -m " + '"' + "formatting" + '"')
     os.system("git push")
