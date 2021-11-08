@@ -5,8 +5,7 @@ if __name__ == "__main__":
     for d in dirs:
         os.chdir(d)
         print(d)
-        os.system("cargo clippy --fix --allow-dirty")
+        os.system("cargo clippy --fix")
         os.system("cargo fmt")
-        os.system("cargo run")
         os.system("cargo clean")
         os.chdir("..")
