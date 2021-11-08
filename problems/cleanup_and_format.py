@@ -7,7 +7,7 @@ if __name__ == "__main__":
         os.chdir(d)
         print(d)
         if allow_dirty:
-            os.system("cargo clippy --fix")
+            os.system("cargo clippy --fix --allow-dirty")
         os.system("cargo fmt")
         os.system("cargo clean")
         os.chdir("..")
