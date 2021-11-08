@@ -1,6 +1,5 @@
 fn main() {
-    let grid = 
-    "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+    let grid = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
     49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
     81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
     52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -20,7 +19,7 @@ fn main() {
     20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
     20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
     01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48";
-    
+
     let v = string_grid_to_vector_grid(grid);
     println!("Solution: {}", largest_product_in_grid(&v));
 }
@@ -46,8 +45,8 @@ fn largest_product_in_grid(grid: &Vec<Vec<u32>>) -> u32 {
         for j in 0..grid[i].len() {
             let mut product = 1;
             for k in 0..4 {
-                if i+k < grid.len() {
-                    product *= grid[i+k][j];
+                if i + k < grid.len() {
+                    product *= grid[i + k][j];
                 }
             }
             if product > largest {
@@ -59,8 +58,8 @@ fn largest_product_in_grid(grid: &Vec<Vec<u32>>) -> u32 {
         for j in 0..grid[i].len() {
             let mut product = 1;
             for k in 0..4 {
-                if j+k < grid[i].len() {
-                    product *= grid[i][j+k];
+                if j + k < grid[i].len() {
+                    product *= grid[i][j + k];
                 }
             }
             if product > largest {
@@ -72,8 +71,8 @@ fn largest_product_in_grid(grid: &Vec<Vec<u32>>) -> u32 {
         for j in 0..grid[i].len() {
             let mut product = 1;
             for k in 0..4 {
-                if i+k < grid.len() && j+k < grid[i].len() {
-                    product *= grid[i+k][j+k];
+                if i + k < grid.len() && j + k < grid[i].len() {
+                    product *= grid[i + k][j + k];
                 }
             }
             if product > largest {
@@ -84,9 +83,10 @@ fn largest_product_in_grid(grid: &Vec<Vec<u32>>) -> u32 {
     for i in 0..grid.len() {
         for j in 0..grid[i].len() {
             let mut product = 1;
-            for k in 0..4 {{
+            for k in 0..4 {
+                {
                     if i + k < 20 && j >= k {
-                        product *= grid[i+k][j-k];
+                        product *= grid[i + k][j - k];
                     }
                 }
             }

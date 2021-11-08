@@ -4,7 +4,9 @@ fn main() {
     let mut max: u128 = 0;
     let mut max_substring = "".to_string();
     for substring in substrings {
-        let product: u128 = substring.chars().fold(1, |acc, x| acc * x.to_digit(10).unwrap() as u128);
+        let product: u128 = substring
+            .chars()
+            .fold(1, |acc, x| acc * x.to_digit(10).unwrap() as u128);
         if product > max {
             max = product;
             max_substring = substring;
