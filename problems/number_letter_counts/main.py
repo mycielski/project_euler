@@ -13,4 +13,3 @@ if __name__ == "__main__":
     for i in range(int(sys.argv[1])):
         count += len(num_to_word(i + 1))
     print(count)
-    
